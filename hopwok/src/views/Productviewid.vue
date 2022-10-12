@@ -1,5 +1,5 @@
 <script setup>
-import TryComp from '@/components/TryComp.vue';
+import ProductDetails from '@/components/ProductDetails.vue';
 
 
 
@@ -8,7 +8,7 @@ import TryComp from '@/components/TryComp.vue';
     <div >
      
    
-    <TryComp :id="id" />>
+    <ProductDetails :id="id" />>
 
      
 
