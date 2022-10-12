@@ -1,6 +1,10 @@
 <script setup>
 import ProductDetails from '@/components/ProductDetails.vue';
-
+    defineProps({
+       id:{
+         type:Number
+        }
+    })
 
 
 </script>
