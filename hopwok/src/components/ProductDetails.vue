@@ -20,12 +20,9 @@ import {ref, onMounted } from 'vue';
       image :{
         type:String
       },
-      props:
-      {
-        id:{
-            type:Number
+       id:{
+         type:Number
         }
-      }
     })
     const productid = {}
 async function api(url) {
@@ -36,7 +33,7 @@ throw new Error(response.statusText);
 return await response.json();
 }
 function getproduct() {
-api(`http://127.0.0.1:5000/product/${id}`)
+api(`http://127.0.0.1:5000/product/${props.id}`)
 
     
     
@@ -57,7 +54,7 @@ onMounted(() => getproduct())
           <div class="card">
           <div class="imgBx">
           
-            <img v-bind:src = "product.image" >
+            <img v-bind:src = "productid.image" >
           </div>
         <div class="contentBx">
            <h2>{{productid.product_name}}</h2>
