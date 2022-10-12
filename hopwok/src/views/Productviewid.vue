@@ -8,7 +8,7 @@ import TryComp from '@/components/TryComp.vue';
     <div >
      
    
-    <TryComp />>
+    <TryComp :id="id" />>
 
      
 
