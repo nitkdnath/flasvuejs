@@ -1,0 +1,19 @@
+function getproduct() 
+    { fetch('http://127.0.0.1:5000/products',{
+       method:"GET",
+       headers:  {
+       "Content-Type":"application/json"
+
+    }
+  })
+
+
+  .then(resp => resp.json())
+  .error((error) => console.log(error.toString()))
+  .then(data =>{console.log(data)})
+  .error((error) => console.log(error.toString()))}
+
+created()
+{
+  getproduct();
+}
