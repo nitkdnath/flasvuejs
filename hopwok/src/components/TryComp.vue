@@ -2,7 +2,7 @@
 import {ref, onMounted } from 'vue';
 
 
-    const products = ref([""])
+    const products = ref([{id: 0, image: "", product_name: "", product_rate: ""}])
 async function api(url) {
   const response = await fetch(url);
 if (!response.ok) {
