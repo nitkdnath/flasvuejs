@@ -1,31 +1,13 @@
 <script setup>
 import ProductDetails from '@/components/ProductDetails.vue';
-    defineProps({
-       id:{
-         type:Number
-        }
-    })
-
-
+import TryComp from '../components/TryComp.vue';
 </script>
 <template>
     <div >
-     
-   
-    <ProductDetails :id="id" />>
-
-     
-
-
-      
+      <TryComp  id = "id" />     
     </div>
-   
-
   </template>
-  
-  
-  <style>
-
+<style>
   @media (min-width: 1024px) {
     .products {
       min-height: 20vh;
@@ -38,5 +20,5 @@ import ProductDetails from '@/components/ProductDetails.vue';
 
    
   }
-  </style>
+</style>
   

@@ -22,8 +22,17 @@ import {ref, onMounted } from 'vue';
       },
      
      
+      props:{
+        id:
+        {
+            type:Number
+        }
+
+     }
+     
 
     })
+
     const products = ref([""])
 async function api(url) {
   const response = await fetch(url);
@@ -55,15 +64,14 @@ onMounted(() => getproduct())
           <div class="imgBx">
           
             <img v-bind:src = "product.image" >
-            <router-link  :to ="{name:'product', params:{id:product.id}}">{{product.product_name}}s</router-link>
           </div>
         <div class="contentBx">
-        
+           <h2>{{product.product_name}}</h2>
         <div class="price">
            <h3>Price : ₹{{product.product_rate}}</h3>
+           <router-link  :to ="{ path: `/product/${product.id}` }"> View details </router-link>
          
-          
-           
+
          </div>
          <a class ="a" href="http://127.0.0.1:5173/">Buy Now</a>
         <a class ="a" href="#">Add to cart</a>
@@ -73,10 +81,15 @@ onMounted(() => getproduct())
 </li> 
 </ul>
 
+
+
   </main>
   </section>
-      
-  </template>
+    
+
+        
+
+    </template>
     
     
     <style scoped>

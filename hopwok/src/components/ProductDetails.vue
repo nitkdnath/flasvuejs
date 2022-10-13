@@ -1,5 +1,6 @@
 <script setup>
 import {ref, onMounted } from 'vue';
+import TryComp from './TryComp.vue';
     defineProps({
       msg :{
         type: String,
@@ -20,11 +21,15 @@ import {ref, onMounted } from 'vue';
       image :{
         type:String
       },
-       id:{
-         type:Number
+  
+        id:{
+            type:Number
         }
+     
     })
     const productid = {}
+
+  
 async function api(url) {
   const response = await fetch(url);
 if (!response.ok) {
@@ -33,27 +38,30 @@ throw new Error(response.statusText);
 return await response.json();
 }
 function getproduct() {
-api(`http://127.0.0.1:5000/product/${props.id}`)
+ 
+api(`http://127.0.0.1:5000/product/${id}/`)
 
-    
-    
-    .then((data) => {productid = data})
+
+   .then((data) => {productid = data})
+   
+   
     .catch(error => {console.log(error.toString())
   }
 )  
 }
 onMounted(() => getproduct())
+
     </script>
     
     <template>
-     
+  
     <section>
       <main>
       <div class = "fetch" >
         <div class="container"> 
           <div class="card">
           <div class="imgBx">
-          
+          <p>{{productid.id}}</p>
             <img v-bind:src = "productid.image" >
           </div>
         <div class="contentBx">

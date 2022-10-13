@@ -7,10 +7,8 @@ import Productviewid from './Productviewid.vue';
 
 </script>
 <template>
-    <div >
-    
-      
-      <TryComp  />
+    <div > 
+     <Productviewid />
       
      
 
@@ -19,10 +17,10 @@ import Productviewid from './Productviewid.vue';
     </div>
    
 
-  </template>
+</template>
   
   
-  <style>
+<style>
 
   @media (min-width: 1024px) {
     .products {
@@ -36,5 +34,5 @@ import Productviewid from './Productviewid.vue';
 
    
   }
-  </style>
+</style>
   
