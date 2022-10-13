@@ -11,7 +11,7 @@ import Productviewid from './Productviewid.vue';
      
       
      
-     <TryComp  :id = "id" />    
+     <TryComp />    
 
       
     </div>
