@@ -1,7 +1,7 @@
 <script setup>
 import {ref, onMounted } from 'vue';
 import TryComp from './TryComp.vue';
-    defineProps({
+ props =   defineProps({
       msg :{
         type: String,
         required: true
@@ -27,7 +27,7 @@ import TryComp from './TryComp.vue';
         }
      
     })
-    const productid = {}
+    const productid = ref({})
 
   
 async function api(url) {
@@ -39,10 +39,10 @@ return await response.json();
 }
 function getproduct() {
  
-api(`http://127.0.0.1:5000/product/${id}/`)
+api(`http://127.0.0.1:5000/product/${props.id}/`)
 
 
-   .then((data) => {productid = data})
+   .then((data) => {productid.value = data})
    
    
     .catch(error => {console.log(error.toString())
