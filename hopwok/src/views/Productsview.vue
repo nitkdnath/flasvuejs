@@ -4,7 +4,7 @@ import Productviewid from './Productviewid.vue';
 </script>
 <template>
     <div > 
-     <Productviewid id  = "id" />
+     <Productviewid />
     </div>
 </template>
   
