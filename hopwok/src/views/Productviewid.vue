@@ -1,27 +1,13 @@
 <script setup>
-import TryComp from '@/components/TryComp.vue';
-
-
-
+import ProductDetails from '@/components/ProductDetails.vue';
+import TryComp from '../components/TryComp.vue';
 </script>
 <template>
     <div >
-     
-   
-    <TryComp />>
-
-     
-
-
-      
+      <TryComp  id = "id" />     
     </div>
-   
-
   </template>
-  
-  
-  <style>
-
+<style>
   @media (min-width: 1024px) {
     .products {
       min-height: 20vh;
@@ -34,5 +20,5 @@ import TryComp from '@/components/TryComp.vue';
 
    
   }
-  </style>
+</style>
   
