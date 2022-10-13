@@ -1,10 +1,9 @@
 <script setup>
 import ProductDetails from '@/components/ProductDetails.vue';
-import TryComp from '../components/TryComp.vue';
 </script>
 <template>
     <div >
-      <Productviewid :id  = "id" /> 
+      <ProductDetails :id  = "id" /> 
     </div>
   </template>
 <style>

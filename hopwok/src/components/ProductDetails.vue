@@ -27,7 +27,7 @@ const props =  defineProps({
         }
      
     })
-    const productid = ref({})
+    const productid = ref({id: 0, image: "", product_name: "", product_rate: ""})
 
   
 async function api(url) {

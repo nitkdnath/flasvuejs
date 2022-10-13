@@ -1,6 +1,5 @@
 <script setup>
 import TryComp from '@/components/TryComp.vue';
-import Productviewid from './Productviewid.vue';
 
 
 
