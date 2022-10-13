@@ -1,12 +1,24 @@
 <script setup>
 import TryComp from '@/components/TryComp.vue';
 import Productviewid from './Productviewid.vue';
+
+
+
+
 </script>
 <template>
     <div > 
      <Productviewid />
+      
+     
+
+
+      
     </div>
+   
+
 </template>
+  
   
 <style>
 

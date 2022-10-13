@@ -1,4 +1,4 @@
-<script setup>
+<script  setup>
 import {ref, onMounted } from 'vue';
     defineProps({
       msg :{
@@ -339,6 +339,5 @@ a{
   
 }
 
-   
-    </style>
-    
+</style>
+
