@@ -27,7 +27,7 @@ const props =  defineProps({
         }
      
     })
-    const productid = {}
+    const productid = ref({})
 
   
 async function api(url) {
@@ -42,7 +42,7 @@ function getproduct() {
 api(`http://127.0.0.1:5000/product/${props.id}/`)
 
 
-   .then((data) => {productid = data})
+   .then((data) => {productid.value = data})
    
    
     .catch(error => {console.log(error.toString())
