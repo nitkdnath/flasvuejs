@@ -58,8 +58,9 @@ onMounted(() => getproduct())
      
     <section>
       <main>
-      <ul class = "fetch" v-for= "product in products"  :key="product.id">
-        <li class="container"> 
+      <div class="card-wrapper">
+      <ul class="container" v-for= "product in products"  :key="product.id">
+        <li > 
           <div class="card">
           <div class="imgBx">
           
@@ -67,9 +68,11 @@ onMounted(() => getproduct())
           </div>
         <div class="contentBx">
            <h2>{{product.product_name}}</h2>
-        <div class="price">
+          
+            <router-link  :to ="{ path: `/product/${product.id}` }"> View details </router-link>
+            <div class="price">
            <h3>Price : ₹{{product.product_rate}}</h3>
-           <router-link  :to ="{ path: `/product/${product.id}` }"> View details </router-link>
+        
          
 
          </div>
@@ -80,7 +83,7 @@ onMounted(() => getproduct())
 
 </li> 
 </ul>
-
+</div>
 
 
   </main>
@@ -94,7 +97,18 @@ onMounted(() => getproduct())
     
     <style scoped>
     
-
+    .card-wrapper {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1.5rem;
+    max-width: 100vw;
+    width: 120ch;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 body{
   display: flex;
   justify-content: center;
@@ -109,8 +123,8 @@ body{
   display: flex;
 
  
-  margin: 0.2em;
-  padding: 0;
+  margin-right: -20px;
+  padding: 2px;
   list-style-type: none;
 
 }
