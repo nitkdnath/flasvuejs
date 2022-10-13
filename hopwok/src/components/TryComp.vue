@@ -1,6 +1,6 @@
 <script  setup>
 import {ref, onMounted } from 'vue';
-    defineProps({
+const props = defineProps({
       msg :{
         type: String,
         required: true

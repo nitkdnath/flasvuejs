@@ -1,7 +1,7 @@
 <script setup>
 import {ref, onMounted } from 'vue';
-import TryComp from './TryComp.vue';
-    defineProps({
+
+const props =  defineProps({
       msg :{
         type: String,
         required: true
@@ -39,7 +39,7 @@ return await response.json();
 }
 function getproduct() {
  
-api(`http://127.0.0.1:5000/product/${id}/`)
+api(`http://127.0.0.1:5000/product/${props.id}/`)
 
 
    .then((data) => {productid = data})
