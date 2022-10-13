@@ -8,7 +8,7 @@ import Productviewid from './Productviewid.vue';
 </script>
 <template>
     <div > 
-     <Productviewid />
+     <TryComp  />
       
      
 
