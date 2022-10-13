@@ -1,9 +1,9 @@
 <script setup>
 import {ref, onMounted } from 'vue';
-    defineProps({
+ props =   defineProps({
       msg :{
         type: String,
-        required: true
+        required: false
 
       },
       image: {

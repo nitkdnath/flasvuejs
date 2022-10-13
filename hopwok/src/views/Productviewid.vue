@@ -4,7 +4,7 @@ import TryComp from '../components/TryComp.vue';
 </script>
 <template>
     <div >
-      <TryComp  id = "id" />     
+      <Productviewid  :id = "id" />     
     </div>
   </template>
 <style>
